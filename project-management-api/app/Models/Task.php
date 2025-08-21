@@ -8,5 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     /** @use HasFactory<\Database\Factories\TaskFactory> */
-    use HasFactory;
+    use HasFactory,softDeletes;
+    protected $fillable=['project_id','title','details','priority','is_completed'];
+    
+    protected $casts = [
+        'is_completed' => 'boolean',
+    ];
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
+    
+     public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+    
+    
 }
