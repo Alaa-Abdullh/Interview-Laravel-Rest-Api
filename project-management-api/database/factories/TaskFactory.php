@@ -18,6 +18,11 @@ class TaskFactory extends Factory
     {
         return [
             //
+        'project_id' => \App\Models\Project::factory(),
+        'title' => fake()->sentence(4),
+        'details' => fake()->paragraph(),
+        'priority' => fake()->randomElement(['low','medium','high']),
+        'is_completed' => fake()->boolean(20),
         ];
     }
 }
