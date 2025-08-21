@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     /** @use HasFactory<\Database\Factories\ProjectFactory> */
-    use HasFactory;
+    use HasFactory,softDeletes;
+    protected $fillable=['name','description','status','due_date'];
+
+    public function tasks(){
+        return $this->hasMany(Task::class);
+    }
 }
