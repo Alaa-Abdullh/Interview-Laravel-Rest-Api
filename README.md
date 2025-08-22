@@ -67,10 +67,11 @@ php artisan migrate:fresh --seed
 ```
 
 **8) Resources**
+```bash
 - php artisan make:resource ProjectResource
 - php artisan make:resource TaskResource
 - php artisan make:resource UserResource
-
+```
 --- 
 
 ### Notes:
