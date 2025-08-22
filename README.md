@@ -49,6 +49,7 @@ php artisan migrate:fresh --seed
 ---
 
 **6)Request Validation**
+```bash
 - php artisan make:request ProjectStoreRequest
 - php artisan make:request ProjectUpdateRequest
 - php artisan make:request TaskStoreRequest
@@ -56,18 +57,21 @@ php artisan migrate:fresh --seed
 - php artisan make:request UserStoreRequest
 - php artisan make:request UserUpdateRequest
 
----
+```
 
 **7)controller**
+```bash
 - php artisan make:controller ProjectController --api
 - php artisan make:controller TaskController --api
 - php artisan make:controller UserController --api
+```
 
 **8) Resources**
 - php artisan make:resource ProjectResource
 - php artisan make:resource TaskResource
 - php artisan make:resource UserResource
 
+--- 
 
 ### Notes:
 - Soft Deletes are enabled for the Users model.
